@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-04-2018 a las 01:32:50
+-- Tiempo de generación: 19-04-2018 a las 00:49:58
 -- Versión del servidor: 5.6.38
 -- Versión de PHP: 7.2.1
 
@@ -93,7 +93,7 @@ INSERT INTO `tipoUsuario` (`id`, `descripcion`) VALUES
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `idTipoUsuario` int(11) NOT NULL DEFAULT '1',
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -106,7 +106,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `idTipoUsuario`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Emiliano', 'emiliano@correo.com', '$2y$10$kxEHxdfcAxboShoKaMfsCuRq0pK/Wrc9WdQ4buPlL4et1KAD.iBDu', '3PkXg4PqJxIKxotkB1k1axaGVvQCWZLYC41czpNTQ2K2GXDfDNvnVl7VE3wv', '2018-03-01 06:36:30', '2018-04-17 08:11:29');
+(1, 1, 'Emiliano', 'emiliano@correo.com', '$2y$10$kxEHxdfcAxboShoKaMfsCuRq0pK/Wrc9WdQ4buPlL4et1KAD.iBDu', 'ObzFe2gkKHxVbFoINURWlsiJGPuHBaFN0mlQh0iC0NS9Idjn8Kd7DMhWZDuB', '2018-03-01 06:36:30', '2018-04-19 07:07:36'),
+(2, 1, NULL, 'andy@hotmail.com', '$2y$10$DdhvN1cXuZ2ipMqHHRvDyu4xH1Gbt4yfgFoKnLxA4qvYUK1zBBpii', 'SiI93v6UA4rEkziVs1HAaG5fVgESMEmDJNMBUhTJqL54WaTGrX1nmXdhmuAo', '2018-04-19 07:07:29', '2018-04-19 07:19:27'),
+(3, 2, NULL, 'hola@hotmail.com', '$2y$10$x1PbriGdFbkKr8BdP/Bke.g.sYjY3h3SnIhG06pTN5HXh6yTxZPRy', NULL, '2018-04-19 07:19:24', '2018-04-19 07:19:24');
 
 --
 -- Índices para tablas volcadas
@@ -159,7 +161,7 @@ ALTER TABLE `tipoUsuario`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
